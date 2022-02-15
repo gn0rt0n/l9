@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,8 +15,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
     }
+
 
     /**
      * Bootstrap any application services.
@@ -26,5 +28,7 @@ class AppServiceProvider extends ServiceProvider
         if (! $this->app->environment('local')) {
             URL::forceScheme('https');
         }
+
+        Model::unguard();
     }
 }
