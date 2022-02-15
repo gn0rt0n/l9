@@ -37,9 +37,6 @@ jobs:
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer install --prefer-dist --no-progress --no-suggest
 
-      - name: Install npm dependencies
-        if: steps.composer-cache.outputs.cache-hit != 'true'
-        run: npm install
 
       - name: Run test suite
         run: vendor/bin/phpunit
@@ -48,12 +45,6 @@ jobs:
 
       - name: Run lint
         run: composer run lint
-
-      - name: Run eslint
-        run: npm run lint
-
-      - name: Run prettier on js
-        run: npm run format
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
