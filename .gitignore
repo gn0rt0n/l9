@@ -13,3 +13,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+.phpunit.xml
+.DS_Store
+.php-cs-fixer.cache
+.phpstorm.meta.php
