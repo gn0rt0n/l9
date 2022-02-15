@@ -58,7 +58,8 @@
         ],
         "lint": [
             "./vendor/bin/phpstan analyse",
-            "./vendor/bin/phpmd ./app ansi ./phpmd.xml"
+            "./vendor/bin/phpmd ./app ansi ./phpmd.xml",
+            "./vendor/bin/php-cs-fixer fix"
         ]
     },
     "extra": {
