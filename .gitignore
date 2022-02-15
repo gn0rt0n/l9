@@ -17,3 +17,6 @@ phpunit.xml
 .DS_Store
 .php-cs-fixer.cache
 .phpstorm.meta.php
+.phpunit.xml
+.DS_Store
+.php-cs-fixer.cache
