@@ -16160,6 +16160,46 @@
         class Str {
          
     }
+            /**
+     * 
+     *
+     * @template TKey of array-key
+     * @template TValue
+     * @implements \ArrayAccess<TKey, TValue>
+     * @implements \Illuminate\Support\Enumerable<TKey, TValue>
+     */ 
+        class Collection {
+                    /**
+         * 
+         *
+         * @see \Spatie\LaravelRay\RayServiceProvider::registerMacros()
+         * @param string $description
+         * @static 
+         */ 
+        public static function ray($description = '')
+        {
+                        return \Illuminate\Support\Collection::ray($description);
+        }
+         
+    }
+            /**
+     * 
+     *
+     */ 
+        class Stringable {
+                    /**
+         * 
+         *
+         * @see \Spatie\LaravelRay\RayServiceProvider::registerMacros()
+         * @param string $description
+         * @static 
+         */ 
+        public static function ray($description = '')
+        {
+                        return \Illuminate\Support\Stringable::ray($description);
+        }
+         
+    }
      
 }
 
@@ -16672,6 +16712,37 @@
         public static function inertiaPage()
         {
                         return \Illuminate\Testing\TestResponse::inertiaPage();
+        }
+                    /**
+         * 
+         *
+         * @see \Spatie\LaravelRay\RayServiceProvider::registerMacros()
+         * @static 
+         */ 
+        public static function ray()
+        {
+                        return \Illuminate\Testing\TestResponse::ray();
+        }
+         
+    }
+     
+}
+
+    namespace Illuminate\Database\Query { 
+            /**
+     * 
+     *
+     */ 
+        class Builder {
+                    /**
+         * 
+         *
+         * @see \Spatie\LaravelRay\RayServiceProvider::registerMacros()
+         * @static 
+         */ 
+        public static function ray()
+        {
+                        return \Illuminate\Database\Query\Builder::ray();
         }
          
     }
@@ -20214,6 +20285,17 @@ namespace  {
             {
                                 /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->macroCall($method, $parameters);
+            }
+             
+                /**
+             * 
+             *
+             * @see \Spatie\LaravelRay\RayServiceProvider::registerMacros()
+             * @static 
+             */ 
+            public static function ray()
+            {
+                                return \Illuminate\Database\Query\Builder::ray();
             }
                     }
             class Event extends \Illuminate\Support\Facades\Event {}
